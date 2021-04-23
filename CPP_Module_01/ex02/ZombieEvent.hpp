@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ZombieEvent.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/23 13:16:00 by dmalori           #+#    #+#             */
-/*   Updated: 2021/04/23 15:48:55 by dmalori          ###   ########.fr       */
+/*   Created: 2021/04/23 15:49:57 by dmalori           #+#    #+#             */
+/*   Updated: 2021/04/23 15:59:29 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
-#include <iostream>
+#include "Zombie.hpp"
+#include <string>
 
-void ponyOnTheHeap(void)
+class ZombieEvent
 {
-    Pony *p = new Pony();
-    std::cout << "** ON HEAP" << std::endl;
-    p->setColore("Bianco");
-    p->stampa(); 
-    delete(p);
-}
-
-void ponyOnTheStack(void)
-{
-    Pony p = Pony();
-    std::cout << "** ON STACK" << std::endl;
-    p.setEta(35);
-    p.stampa();
-}
-
-int main (void)
-{
-    ponyOnTheHeap();
-    ponyOnTheStack();
-    return (0);
-}
+    private:
+        std::string type;
+    public:
+        ZombieEvent(void);
+        void setZombieType(std::string type);
+        Zombie* newZombie(std::string name);
+        void randomChump(void);
+        std::string randomName(void);
+};

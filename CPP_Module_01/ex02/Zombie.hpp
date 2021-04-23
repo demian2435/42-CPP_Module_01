@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/23 13:16:00 by dmalori           #+#    #+#             */
-/*   Updated: 2021/04/23 15:48:55 by dmalori          ###   ########.fr       */
+/*   Created: 2021/04/23 15:39:55 by dmalori           #+#    #+#             */
+/*   Updated: 2021/04/23 15:49:25 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
-#include <iostream>
+#include <string>
 
-void ponyOnTheHeap(void)
+class Zombie
 {
-    Pony *p = new Pony();
-    std::cout << "** ON HEAP" << std::endl;
-    p->setColore("Bianco");
-    p->stampa(); 
-    delete(p);
-}
-
-void ponyOnTheStack(void)
-{
-    Pony p = Pony();
-    std::cout << "** ON STACK" << std::endl;
-    p.setEta(35);
-    p.stampa();
-}
-
-int main (void)
-{
-    ponyOnTheHeap();
-    ponyOnTheStack();
-    return (0);
-}
+	private:
+		std::string type;
+		std::string name;
+	public:
+		Zombie(std::string type, std::string name);
+		void announce(void);
+		void setType(std::string type);
+		void setName(std::string name);
+		std::string getType(void);
+		std::string getName(void);
+};

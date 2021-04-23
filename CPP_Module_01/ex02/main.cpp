@@ -5,34 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/23 13:16:00 by dmalori           #+#    #+#             */
-/*   Updated: 2021/04/23 15:48:55 by dmalori          ###   ########.fr       */
+/*   Created: 2021/04/23 15:48:58 by dmalori           #+#    #+#             */
+/*   Updated: 2021/04/23 16:40:39 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Pony.hpp"
-#include <iostream>
-
-void ponyOnTheHeap(void)
-{
-    Pony *p = new Pony();
-    std::cout << "** ON HEAP" << std::endl;
-    p->setColore("Bianco");
-    p->stampa(); 
-    delete(p);
-}
-
-void ponyOnTheStack(void)
-{
-    Pony p = Pony();
-    std::cout << "** ON STACK" << std::endl;
-    p.setEta(35);
-    p.stampa();
-}
+#include "ZombieEvent.hpp"
 
 int main (void)
 {
-    ponyOnTheHeap();
-    ponyOnTheStack();
-    return (0);
+	Zombie *z;
+	ZombieEvent factory = ZombieEvent();
+	
+	z = factory.newZombie("Goffredo");
+	z->announce();
+	delete(z);
+	z = new Zombie("Simpatico", "Peppino");
+	z->announce();
+	delete(z);
+	factory.setZombieType("Gommoso");
+	factory.randomChump();
+
+	return (0);
 }
