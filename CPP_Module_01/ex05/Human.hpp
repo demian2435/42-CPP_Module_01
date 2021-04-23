@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   Human.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/23 15:39:55 by dmalori           #+#    #+#             */
-/*   Updated: 2021/04/23 16:44:50 by dmalori          ###   ########.fr       */
+/*   Created: 2021/04/23 18:04:01 by dmalori           #+#    #+#             */
+/*   Updated: 2021/04/23 18:54:11 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 #include <string>
 
-class Zombie
+class Human
 {
-	private:
-		std::string type;
-		std::string name;
-	public:
-		Zombie(std::string type, std::string name);
-		void announce(void);
-		void setType(std::string type);
-		void setName(std::string name);
-		std::string getType(void);
-		std::string getName(void);
+    private:
+
+    public:
+        Human(void);
+        std::string identify(void);
+        std::string getBrain(void);
 };

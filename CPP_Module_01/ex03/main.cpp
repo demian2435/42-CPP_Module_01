@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/23 15:39:55 by dmalori           #+#    #+#             */
-/*   Updated: 2021/04/23 16:44:50 by dmalori          ###   ########.fr       */
+/*   Created: 2021/04/23 15:48:58 by dmalori           #+#    #+#             */
+/*   Updated: 2021/04/23 18:17:11 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#include <string>
+#include "ZombieHorde.hpp"
+#include "Zombie.hpp"
 
-class Zombie
+int main (void)
 {
-	private:
-		std::string type;
-		std::string name;
-	public:
-		Zombie(std::string type, std::string name);
-		void announce(void);
-		void setType(std::string type);
-		void setName(std::string name);
-		std::string getType(void);
-		std::string getName(void);
-};
+	ZombieHorde zh = ZombieHorde(25);
+	zh.announce();
+	return (0);
+}

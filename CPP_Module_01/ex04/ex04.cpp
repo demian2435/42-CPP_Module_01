@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.hpp                                         :+:      :+:    :+:   */
+/*   ex04.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/04/23 15:39:55 by dmalori           #+#    #+#             */
-/*   Updated: 2021/04/23 16:44:50 by dmalori          ###   ########.fr       */
+/*   Created: 2021/04/23 17:53:29 by dmalori           #+#    #+#             */
+/*   Updated: 2021/04/23 18:00:44 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
 #include <string>
+#include <iostream>
 
-class Zombie
+int main (void)
 {
-	private:
-		std::string type;
-		std::string name;
-	public:
-		Zombie(std::string type, std::string name);
-		void announce(void);
-		void setType(std::string type);
-		void setName(std::string name);
-		std::string getType(void);
-		std::string getName(void);
-};
+    std::string text = "HI THIS IS BRAIN";
+    std::string *p = &text;
+
+    std::cout << text << std::endl;
+    std::cout << p << std::endl;
+
+    return (0);
+}

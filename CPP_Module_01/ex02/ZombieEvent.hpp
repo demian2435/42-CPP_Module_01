@@ -6,10 +6,11 @@
 /*   By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/23 15:49:57 by dmalori           #+#    #+#             */
-/*   Updated: 2021/04/23 15:59:29 by dmalori          ###   ########.fr       */
+/*   Updated: 2021/04/23 16:44:43 by dmalori          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
 #include "Zombie.hpp"
 #include <string>
 

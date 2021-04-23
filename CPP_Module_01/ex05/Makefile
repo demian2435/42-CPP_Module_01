@@ -6,7 +6,7 @@
 #    By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/23 11:15:19 by dmalori           #+#    #+#              #
-#    Updated: 2021/04/23 16:44:02 by dmalori          ###   ########.fr        #
+#    Updated: 2021/04/23 18:04:12 by dmalori          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,8 +83,8 @@ On_IPurple	=	'\033[0;105m'	# Purple
 On_ICyan	=	'\033[0;106m'	# Cyan
 On_IWhite	=	'\033[0;107m'	# White
 
-NAME		=	zombie_horde
-SRC			=	Zombie.cpp ZombieHorde.cpp main.cpp
+NAME		=	brain_human
+SRC			=	Brain.cpp Human.cpp main.cpp
 CC			=	clang++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 
