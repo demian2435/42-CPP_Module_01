@@ -6,7 +6,7 @@
 #    By: dmalori <dmalori@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/04/23 11:15:19 by dmalori           #+#    #+#              #
-#    Updated: 2021/04/23 11:39:54 by dmalori          ###   ########.fr        #
+#    Updated: 2021/04/23 13:15:43 by dmalori          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,8 +83,8 @@ On_IPurple	=	'\033[0;105m'	# Purple
 On_ICyan	=	'\033[0;106m'	# Cyan
 On_IWhite	=	'\033[0;107m'	# White
 
-NAME		=	megaphone
-SRC			=	megaphone.cpp
+NAME		=	pony
+SRC			=	Pony.cpp main.cpp
 CC			=	clang++
 CFLAGS		=	-Wall -Wextra -Werror -std=c++98 -pedantic
 
@@ -103,8 +103,6 @@ fclean		:	clean
 				@rm -rf $(NAME)
 
 run			:	all
-				./$(NAME) "shhhhh... I think the students are asleep..."
-				./$(NAME) Damnit " ! " "Sorry students, I thought this thing was off."
 				./$(NAME)
 
 .phony		:	all re clean fclean run
