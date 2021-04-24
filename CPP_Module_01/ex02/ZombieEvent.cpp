@@ -12,11 +12,12 @@
 
 #include "ZombieEvent.hpp"
 #include <string>
-#include <stdlib.h>
-#include <time.h>
+#include <cstdlib>
+#include <ctime>
 
-ZombieEvent::ZombieEvent(void) {
-	srand (time(NULL));
+ZombieEvent::ZombieEvent(void)
+{
+    std::srand(0);
 	this->type = "Burlone";
 }
 void ZombieEvent::setZombieType(std::string type)
@@ -34,5 +35,5 @@ void ZombieEvent::randomChump(void)
 std::string ZombieEvent::randomName(void)
 {
 	std::string nomi[6] = {"Mario", "Giovanni", "Michele", "Gino", "Pippo", "Giacomo"};
-	return nomi[rand() % 4];
+	return nomi[std::rand() % 4];
 }

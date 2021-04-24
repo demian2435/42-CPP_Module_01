@@ -10,3 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Brain.hpp"
+#include <string>
+#include <sstream>
+
+Brain::Brain(void) {}
+
+std::string Brain::identify(void) const{
+	std::stringstream s;
+	s << this;
+	return (s.str());
+}

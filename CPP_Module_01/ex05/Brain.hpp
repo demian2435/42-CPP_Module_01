@@ -11,3 +11,11 @@
 /* ************************************************************************** */
 
 #pragma once
+#include <string>
+
+class Brain
+{
+    public:
+        Brain(void);
+        std::string identify(void) const;
+};

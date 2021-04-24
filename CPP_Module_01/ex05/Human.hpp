@@ -11,14 +11,16 @@
 /* ************************************************************************** */
 
 #pragma once
+#include "Brain.hpp"
 #include <string>
 
 class Human
 {
     private:
+        Brain const brain;
 
     public:
         Human(void);
-        std::string identify(void);
-        std::string getBrain(void);
+        std::string identify(void) const;
+        const Brain& getBrain(void);
 };

@@ -18,7 +18,7 @@ class ZombieHorde
 {
     private:
         int N;
-        Zombie *lista[1000];
+        Zombie **lista;
 
     public:
         ZombieHorde(int N);

@@ -13,16 +13,14 @@
 #include "ZombieHorde.hpp"
 #include "Zombie.hpp"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
 
 ZombieHorde::ZombieHorde(int N)
 {
-    if (N > 1000)
-    {
-        std::cout << "Max orda 1000 unità" << std::endl;
-        this->N = 1000;
-    }
-    else
-        this->N = N;
+    std::srand(0);
+    this->N = N;
+    this->lista = new Zombie *[N];
 
     for (int i = 0; i < this->N; i++)
     {
@@ -33,6 +31,7 @@ ZombieHorde::~ZombieHorde(void)
 {
     for (int i = 0; i < this->N; i++)
         delete(this->lista[i]);
+    delete (this->lista);
 }
 void ZombieHorde::announce(void)
 {
@@ -42,5 +41,5 @@ void ZombieHorde::announce(void)
 std::string ZombieHorde::randomName(void)
 {
 	std::string nomi[6] = {"Mario", "Giovanni", "Michele", "Gino", "Pippo", "Giacomo"};
-	return nomi[rand() % 4];
+	return nomi[std::rand() % 4];
 }
