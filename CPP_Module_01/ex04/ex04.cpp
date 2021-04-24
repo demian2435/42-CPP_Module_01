@@ -15,11 +15,23 @@
 
 int main (void)
 {
-    std::string text = "HI THIS IS BRAIN";
-    std::string *p = &text;
+    std::string stringa = "HI THIS IS BRAIN";
+    std::string *puntatore = &stringa;
+    std::string &riferimento = stringa;
+    std::string copia = stringa;
 
-    std::cout << text << std::endl;
-    std::cout << p << std::endl;
+    std::cout << "Stringa: " << stringa << std::endl;
+    std::cout << "Puntatore: " << puntatore << std::endl;
+    std::cout << "Riferimento: " << riferimento << std::endl;
+    std::cout << "Copia: " << copia << std::endl;
+
+    stringa = "NUOVO TESTO";
+    std::cout << "*** Modifico la stringa" << std::endl;  
+
+    std::cout << "Stringa: " << stringa << std::endl;
+    std::cout << "Puntatore: " << puntatore << std::endl;
+    std::cout << "Riferimento: " << riferimento << std::endl;
+    std::cout << "Copia: " << copia << std::endl;  
 
     return (0);
 }
